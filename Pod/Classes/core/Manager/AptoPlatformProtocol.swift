@@ -51,8 +51,8 @@ public protocol AptoPlatformProtocol {
     var tokenProvider: AptoPlatformWebTokenProvider? { get set }
     var currentPCIAuthenticationType: PCIAuthType { get }
 
-    func initializeWithApiKey(_ apiKey: String, environment: AptoPlatformEnvironment, setupCertPinning: Bool)
-    func initializeWithApiKey(_ apiKey: String, environment: AptoPlatformEnvironment)
+    func initializeWithApiKey(_ apiKey: String, environment: AptoPlatformEnvironment, setupCertPinning: Bool, debugLog: Bool)
+    func initializeWithApiKey(_ apiKey: String, environment: AptoPlatformEnvironment, debugLog: Bool)
     func initializeWithApiKey(_ apiKey: String)
 
     // Configuration handling

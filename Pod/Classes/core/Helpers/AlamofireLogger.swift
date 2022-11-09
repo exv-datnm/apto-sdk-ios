@@ -9,15 +9,19 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 
-public final class AptoAlamofireLogger: EventMonitor {
+final class AptoAlamofireLogger: EventMonitor {
 
-    public func requestDidResume(_ request: Request) {
+    func requestDidResume(_ request: Request) {
+        guard AptoPlatform.shared.debugLogEnable else { return }
+
         request.cURLDescription(calling: { (curl) in
             print(curl)
         })
     }
 
-    public func request<Value>(_ request: DataRequest, didParseResponse response: AFDataResponse<Value>) {
+    func request<Value>(_ request: DataRequest, didParseResponse response: AFDataResponse<Value>) {
+        guard AptoPlatform.shared.debugLogEnable else { return }
+
         print("Response Received: \(response.debugDescription)")
         print("Response Headers: \(String(describing: response.response?.allHeaderFields))")
     }

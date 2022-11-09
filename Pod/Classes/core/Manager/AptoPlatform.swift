@@ -26,7 +26,7 @@ import UIKit
 /// AptoPlatform is the main entry point into our SDK
 @objc public class AptoPlatform: NSObject, AptoPlatformProtocol {
     // MARK: Logger
-    public var debugLogEnable: Bool = false
+    internal var debugLogEnable: Bool = false
 
     // MARK: Authentication attributes
 
@@ -106,8 +106,9 @@ import UIKit
     ///   - setupCertPinning: Configure SSL Pinning to avoid network MITM attacks
     @objc public func initializeWithApiKey(_ apiKey: String,
                                            environment: AptoPlatformEnvironment,
-                                           setupCertPinning _: Bool)
+                                           setupCertPinning _: Bool, debugLog: Bool)
     {
+        self.debugLogEnable = debugLog
         guard apiKey != self.apiKey, environment != self.environment else { return }
         let certPinningConfig: [String: [String: AnyObject]]? = nil
         self.apiKey = apiKey
@@ -155,8 +156,8 @@ import UIKit
     ///   - apiKey: Developer api key that you can get from our [developer portal]
     ///   (https://www.aptopayments.com/#/developers)
     ///   - environment: Desired environment to use during development
-    @objc public func initializeWithApiKey(_ apiKey: String, environment: AptoPlatformEnvironment) {
-        initializeWithApiKey(apiKey, environment: environment, setupCertPinning: false)
+    @objc public func initializeWithApiKey(_ apiKey: String, environment: AptoPlatformEnvironment, debugLog: Bool) {
+        initializeWithApiKey(apiKey, environment: environment, setupCertPinning: false, debugLog: debugLog)
     }
 
     /// Initialise the SDK in order to authenticate with our system and start making API calls
@@ -164,7 +165,7 @@ import UIKit
     ///   - apiKey: Developer api key that you can get from our [developer portal]
     ///   (https://www.aptopayments.com/#/developers)
     @objc public func initializeWithApiKey(_ apiKey: String) {
-        initializeWithApiKey(apiKey, environment: .production)
+        initializeWithApiKey(apiKey, environment: .production, debugLog: false)
     }
 
     /// Manually sets user token to use when making api calls

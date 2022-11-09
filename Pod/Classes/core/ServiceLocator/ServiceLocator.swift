@@ -9,7 +9,7 @@
 class ServiceLocator: ServiceLocatorProtocol {
     static let shared: ServiceLocatorProtocol = ServiceLocator()
 
-    lazy var networkLocator: NetworkLocatorProtocol = NetworkLocator(serviceLocator: self, debugLogEnable: AptoPlatform.shared.debugLogEnable)
+    lazy var networkLocator: NetworkLocatorProtocol = NetworkLocator(serviceLocator: self)
     lazy var storageLocator: StorageLocatorProtocol = StorageLocator(serviceLocator: self)
 
     lazy var platform: AptoPlatformProtocol = AptoPlatform.shared
