@@ -62,10 +62,10 @@ final class NetworkManager: NetworkManagerProtocol {
                 "\(host)": DisabledTrustEvaluator(),
             ]
             let serverTrustManager = ServerTrustManager(evaluators: serverTrustPolicies)
-            manager = Session(configuration: configuration, serverTrustManager: serverTrustManager)
+            manager = Session(configuration: configuration, serverTrustManager: serverTrustManager, eventMonitors: [ AptoAlamofireLogger() ])
             reachabilityManager = NetworkReachabilityManager(host: baseURL.absoluteString)
         } else {
-            manager = Session(configuration: configuration)
+            manager = Session(configuration: configuration, eventMonitors: [ AptoAlamofireLogger() ])
             reachabilityManager = NetworkReachabilityManager()
         }
         reachabilityManager?.startListening(onUpdatePerforming: networkStatusChanged(_:))
