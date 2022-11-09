@@ -5,6 +5,8 @@
 //  Created by Takeichi Kanzaki on 03/12/2018.
 //
 
+import Foundation
+
 protocol FinancialAccountCacheProtocol {
     func cachedFundingSource(accountId: String) -> FundingSource?
     func cachedFundingSources() -> [String: FundingSource]?

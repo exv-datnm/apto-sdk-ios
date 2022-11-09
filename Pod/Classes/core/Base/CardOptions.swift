@@ -5,6 +5,8 @@
 //  Created by Ivan Oliver Martínez on 30/07/2018.
 //
 
+import Foundation
+
 @objc public enum FeatureKey: Int {
     case showActivateCardButton
     case showStatsButton

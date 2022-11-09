@@ -6,7 +6,7 @@
 //
 //
 
-import Foundation
+import UIKit
 
 public extension NSMutableAttributedString {
     internal static func createFrom(string: String, font: UIFont, color: UIColor) -> NSMutableAttributedString {

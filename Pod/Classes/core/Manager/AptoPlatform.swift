@@ -1,4 +1,5 @@
 import Foundation
+import UIKit
 
 /// By default, AptoPlatform are provisioned with different environments.
 /// An environment provides a runtime execution context for our API, depending
@@ -24,6 +25,9 @@ import Foundation
 
 /// AptoPlatform is the main entry point into our SDK
 @objc public class AptoPlatform: NSObject, AptoPlatformProtocol {
+    // MARK: Logger
+    public var debugLogEnable: Bool = false
+
     // MARK: Authentication attributes
 
     // swiftlint:disable implicitly_unwrapped_optional trailing_closure
@@ -92,9 +96,7 @@ import Foundation
 
     /// Default `AptoPlatform`
     /// - Returns: Single instance of `AptoPlatform` class
-    @objc public static func defaultManager() -> AptoPlatform {
-        return sharedManager
-    }
+    @objc public static var shared: AptoPlatform { sharedManager }
 
     /// Initialise the SDK in order to authenticate with our system and start making API calls
     /// - Parameters:

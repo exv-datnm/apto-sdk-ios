@@ -6,6 +6,8 @@
 //
 //
 
+import Foundation
+
 public enum CardApplicationStatus: String {
     case unknown
     case created

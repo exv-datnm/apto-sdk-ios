@@ -5,6 +5,8 @@
 //  Created by Takeichi Kanzaki on 26/09/2018.
 //
 
+import Foundation
+
 public struct TitleValue {
     public let title: String
     public let value: String

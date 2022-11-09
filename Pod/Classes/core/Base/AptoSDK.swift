@@ -6,6 +6,8 @@
 //
 //
 
+import Foundation
+
 public final class AptoSDK {
     private static let internalVersion = "0.0.0"
 

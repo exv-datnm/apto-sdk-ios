@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 public enum StatusBarStyle: String, Equatable {
     case light

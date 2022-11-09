@@ -53,8 +53,9 @@ final class NetworkManager: NetworkManagerProtocol {
         return manager.delegate
     }
 
-    init(baseURL: URL? = nil, certPinningConfig: [String: [String: AnyObject]]? = nil,
-         allowSelfSignedCertificate: Bool = false, notificationHandler: NotificationHandler)
+    init(
+        baseURL: URL? = nil, certPinningConfig: [String: [String: AnyObject]]? = nil,
+        allowSelfSignedCertificate: Bool = false, notificationHandler: NotificationHandler, debugLogEnable: Bool)
     {
         self.notificationHandler = notificationHandler
         if let baseURL = baseURL, let host = baseURL.host, allowSelfSignedCertificate {
@@ -62,10 +63,10 @@ final class NetworkManager: NetworkManagerProtocol {
                 "\(host)": DisabledTrustEvaluator(),
             ]
             let serverTrustManager = ServerTrustManager(evaluators: serverTrustPolicies)
-            manager = Session(configuration: configuration, serverTrustManager: serverTrustManager, eventMonitors: [ AptoAlamofireLogger() ])
+            manager = Session(configuration: configuration, serverTrustManager: serverTrustManager, eventMonitors: debugLogEnable ? [ AptoAlamofireLogger() ] : [])
             reachabilityManager = NetworkReachabilityManager(host: baseURL.absoluteString)
         } else {
-            manager = Session(configuration: configuration, eventMonitors: [ AptoAlamofireLogger() ])
+            manager = Session(configuration: configuration, eventMonitors: debugLogEnable ? [ AptoAlamofireLogger() ] : [])
             reachabilityManager = NetworkReachabilityManager()
         }
         reachabilityManager?.startListening(onUpdatePerforming: networkStatusChanged(_:))

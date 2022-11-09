@@ -5,6 +5,8 @@
 //  Created by Fahad Naeem on 6/12/19.
 //
 
+import Foundation
+
 protocol ProjectBrandingCacheProtocol {
     func cachedProjectBranding() -> Branding?
     func saveProjectBranding(_ branding: Branding)

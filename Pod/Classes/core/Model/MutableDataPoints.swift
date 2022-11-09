@@ -6,6 +6,8 @@
 //
 //
 
+import Foundation
+
 // MARK: - Datapoint modification checking
 
 protocol MutableDatapoint {

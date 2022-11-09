@@ -6,6 +6,8 @@
 //
 //
 
+import Foundation
+
 protocol NetworkLocatorProtocol {
     func networkManager(baseURL: URL?,
                         certPinningConfig: [String: [String: AnyObject]]?,

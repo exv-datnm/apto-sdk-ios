@@ -1,4 +1,5 @@
 import Foundation
+import UIKit
 
 /// AptoPlatformDelegate is in charge of receiving different events from the SDK
 @objc public protocol AptoPlatformDelegate {

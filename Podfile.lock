@@ -1,0 +1,64 @@
+PODS:
+  - Alamofire (5.4.4)
+  - AlamofireNetworkActivityIndicator (3.1.0):
+    - Alamofire (~> 5.1)
+  - Bond (7.8.1):
+    - Differ (~> 1.4)
+    - ReactiveKit (~> 3.14)
+  - Differ (1.4.5)
+  - FTLinearActivityIndicator (1.2.1)
+  - GoogleKit (0.3.2)
+  - Mixpanel-swift (3.2.6):
+    - Mixpanel-swift/Complete (= 3.2.6)
+  - Mixpanel-swift/Complete (3.2.6)
+  - PhoneNumberKit (3.3.4):
+    - PhoneNumberKit/PhoneNumberKitCore (= 3.3.4)
+    - PhoneNumberKit/UIKit (= 3.3.4)
+  - PhoneNumberKit/PhoneNumberKitCore (3.3.4)
+  - PhoneNumberKit/UIKit (3.3.4):
+    - PhoneNumberKit/PhoneNumberKitCore
+  - ReactiveKit (3.19.1)
+  - SwiftyJSON (5.0.1)
+  - TrustKit (1.7.0)
+
+DEPENDENCIES:
+  - Alamofire (~> 5.4.3)
+  - AlamofireNetworkActivityIndicator (~> 3.1)
+  - Bond (~> 7.6)
+  - FTLinearActivityIndicator (= 1.2.1)
+  - GoogleKit (~> 0.3)
+  - Mixpanel-swift (~> 3.2.0)
+  - PhoneNumberKit (~> 3.3.3)
+  - SwiftyJSON (~> 5.0)
+  - TrustKit (~> 1.6)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - AlamofireNetworkActivityIndicator
+    - Bond
+    - Differ
+    - FTLinearActivityIndicator
+    - GoogleKit
+    - Mixpanel-swift
+    - PhoneNumberKit
+    - ReactiveKit
+    - SwiftyJSON
+    - TrustKit
+
+SPEC CHECKSUMS:
+  Alamofire: f3b09a368f1582ab751b3fff5460276e0d2cf5c9
+  AlamofireNetworkActivityIndicator: 6564782bd7b9e6c430ae67d9277af01907b01ca4
+  Bond: 87075c7f20f37ea3e73dc7057fce839787bf46eb
+  Differ: 3b6bd78e2b20cc795d9a86f7641d087524e4273e
+  FTLinearActivityIndicator: a3ef57034bd05bc80c1a7c62c8797c0361fa7bee
+  GoogleKit: c4b00706a0b1091b295e59920bbd46fd30f74243
+  Mixpanel-swift: ce120e0d51dcb0d0bf5a25e1ee232fe89ad1136b
+  PhoneNumberKit: 441e8b26ec88d598e3591de9061eff18f5dd12e8
+  ReactiveKit: a36ebeb959fe6852dd674cc423163bfffb7e0541
+  SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
+  TrustKit: dac38bb37e49bdfeca41b1a19d020da38017b51c
+
+PODFILE CHECKSUM: 179fe27b5c39928c254f5f129ddf2a3fa06347fb
+
+COCOAPODS: 1.11.3

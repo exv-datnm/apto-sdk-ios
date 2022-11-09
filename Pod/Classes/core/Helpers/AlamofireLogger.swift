@@ -11,13 +11,13 @@ import SwiftyJSON
 
 public final class AptoAlamofireLogger: EventMonitor {
 
-    func requestDidResume(_ request: Request) {
+    public func requestDidResume(_ request: Request) {
         request.cURLDescription(calling: { (curl) in
             print(curl)
         })
     }
 
-    func request<Value>(_ request: DataRequest, didParseResponse response: AFDataResponse<Value>) {
+    public func request<Value>(_ request: DataRequest, didParseResponse response: AFDataResponse<Value>) {
         print("Response Received: \(response.debugDescription)")
         print("Response Headers: \(String(describing: response.response?.allHeaderFields))")
     }

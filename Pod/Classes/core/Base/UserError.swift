@@ -6,6 +6,8 @@
 //
 //
 
+import Foundation
+
 public class UserError: NSError {
     private let userErrorDomain = "com.shiftpayments.user.error"
     private let errorCode = 1436

@@ -5,6 +5,8 @@
 //  Created by Takeichi Kanzaki on 10/03/2020.
 //
 
+import UIKit
+
 public struct CardDetails {
     public let expiration: String
     public let pan: String

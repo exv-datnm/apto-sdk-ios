@@ -6,6 +6,8 @@
 //
 //
 
+import Foundation
+
 protocol CardApplicationsStorageProtocol {
     func createApplication(_ apiKey: String,
                            userToken: String,

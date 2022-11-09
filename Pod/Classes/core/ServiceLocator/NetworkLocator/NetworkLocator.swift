@@ -10,9 +10,11 @@ import UIKit
 
 class NetworkLocator: NetworkLocatorProtocol {
     private unowned let serviceLocator: ServiceLocatorProtocol
+    private var debugLogEnable: Bool
 
-    init(serviceLocator: ServiceLocatorProtocol) {
+    init(serviceLocator: ServiceLocatorProtocol, debugLogEnable: Bool) {
         self.serviceLocator = serviceLocator
+        self.debugLogEnable = debugLogEnable
     }
 
     private var _networkManager: NetworkManager?
@@ -26,7 +28,7 @@ class NetworkLocator: NetworkLocatorProtocol {
 
         let manager = NetworkManager(baseURL: baseURL, certPinningConfig: certPinningConfig,
                                      allowSelfSignedCertificate: allowSelfSignedCertificate,
-                                     notificationHandler: serviceLocator.notificationHandler)
+                                     notificationHandler: serviceLocator.notificationHandler, debugLogEnable: debugLogEnable)
         _networkManager = manager
 
         return manager

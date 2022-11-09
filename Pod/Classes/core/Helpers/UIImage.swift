@@ -5,7 +5,7 @@
 //  Created by Takeichi Kanzaki on 15/07/2019.
 //
 
-import Foundation
+import UIKit
 
 class PodBundle: Bundle {
     public static func bundle() -> Bundle {

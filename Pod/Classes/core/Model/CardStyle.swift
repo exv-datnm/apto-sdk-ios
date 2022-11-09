@@ -6,6 +6,7 @@
 //
 
 import SwiftyJSON
+import UIKit
 
 public enum CardBackgroundStyle: Equatable {
     case image(url: URL)

@@ -6,6 +6,9 @@
 //
 //
 
+import Foundation
+import UIKit
+
 public struct NativeContent: Equatable, Codable {
     public let asset: String?
     public let backgroundImage: String?
